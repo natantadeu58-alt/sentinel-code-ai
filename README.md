@@ -44,8 +44,6 @@ O ecossistema é composto por ferramentas complementares que cobrem diferentes c
 - [ ] Migrar a arquitetura dos scripts para uma estrutura modular de pacotes dentro de um diretório específico.
 - [ ] Desenvolver relatórios automáticos exportáveis nos formatos JSON e PDF.
 
-        
-       ---
 
 > [!WARNING]
 > **Aviso:** Este ecossistema foi desenvolvido estritamente para fins educativos, auditorias de segurança autorizadas e testes de intrusão consentidos. O uso indevido dessas ferramentas para atividades maliciosas é de total responsabilidade do usuário.
