@@ -18,18 +18,23 @@ O ecossistema é composto por ferramentas complementares que cobrem diferentes c
   
   * * **`scanner_v1.py` ao `scanner_v5.py` (Suíte Evolutiva de Auditoria)** * **Scanner de Senhas & Autenticação:** Módulos dedicados a testar a robustez de credenciais corporativas e validação de políticas de segurança contra ataques de força bruta controlado.
     
-    *   * **Scanner de Vulnerabilidades Web:** Análise automatizada de cabeçalhos HTTP, validação de certificados SSL/TLS e deteção de falhas comuns listadas no OWASP Top 10.
-        
-        * ---## 🛠️ Tecnologias Utilizadas
-        *
-        *   **Linguagem Principal:** Python 3.x* **Bibliotecas de Rede:** `socket`, `requests`, `urllib3`*
-        
-        *   **Inteligência Artificial:** Integração de Large Language Models (LLMs) via chamadas de API assíncronas para automação de triagem.*
-        
-        *   **Segurança de Credenciais:** Gestão de variáveis de ambiente com `python-dotenv`.
-        
-        *   ---## 🛡️ Boas Práticas de Segurança (DevSecOps)
-          
+    * **Scanner de Vulnerabilidades Web:** Análise automatizada de cabeçalhos HTTP, validação de certificados SSL/TLS e deteção de falhas comuns listadas no OWASP Top 10.
+
+---
+
+### 🛠️ Tecnologias Utilizadas
+
+* **Linguagem Principal:** Python 3.x
+* **Bibliotecas de Rede:** `socket`, `requests`, `urllib3`
+* **Inteligência Artificial:** Integração de Large Language Models (LLMs) via chamadas de API assíncronas para automação de triagem.
+* **Segurança de Credenciais:** Gestão de variáveis de ambiente com `python-dotenv`.
+
+---
+
+### 🛡️ Boas Práticas de Segurança (DevSecOps)
+
+* **Proteção de Segredos:** As chaves de API e tokens privados nunca são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
+
         *    As chaves de API e tokens privados **nunca** são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
         
             * Todas as varreduras web possuem tratamento de exceções robusto para evitar negação de serviço (DoS) acidental nos alvos testados.
