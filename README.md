@@ -31,9 +31,12 @@ O ecossistema é composto por ferramentas complementares que cobrem diferentes c
 
 ---
 
+---
+
 ### 🛡️ Boas Práticas de Segurança (DevSecOps)
 
-* **Proteção de Segredos:** As chaves de API e tokens privados nunca são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
+* **Proteção de Segredos:** As chaves de API e tokens privados **nunca** são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
+* **Resiliência do Sistema:** Todas as varreduras web possuem tratamento de exceções robusto para evitar negação de serviço ou interrupções inesperadas durante a execução.
 
         *    As chaves de API e tokens privados **nunca** são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
         
