@@ -33,21 +33,19 @@ O ecossistema é composto por ferramentas complementares que cobrem diferentes c
 
 ---
 
+---
+
 ### 🛡️ Boas Práticas de Segurança (DevSecOps)
 
 * **Proteção de Segredos:** As chaves de API e tokens privados **nunca** são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
 * **Resiliência do Sistema:** Todas as varreduras web possuem tratamento de exceções robusto para evitar negação de serviço ou interrupções inesperadas durante a execução.
 
-        *    As chaves de API e tokens privados **nunca** são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
-        
-            * Todas as varreduras web possuem tratamento de exceções robusto para evitar negação de serviço (DoS) acidental nos alvos testados.
 ---
 
-        ## 🚀 Próximos Passos do Roadmap
-        
-        - [ ] Migrar a arquitetura dos scripts para uma estrutura modular de pacotes dentro de um diretório `/modules`.- [ ] Implementar uma interface de linha de comando (CLI) unificada usando a biblioteca `argparse`.
-        
-        - [ ] Desenvolver relatórios automáticos exportáveis nos formatos JSON e PDF.
-        ---
+### 🚀 Próximos Passos do Roadmap
+
+- [ ] Migrar a arquitetura dos scripts para uma estrutura modular de pacotes dentro de um diretório específico.
+- [ ] Desenvolver relatórios automáticos exportáveis nos formatos JSON e PDF.
+
         
         *Aviso: Este ecossistema foi desenvolvido estritamente para fins educativos, auditorias de segurança autorizadas e testes de intrusão legítimos (Ethical Hacking).
