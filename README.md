@@ -50,6 +50,7 @@ O ecossistema é composto por ferramentas complementares que cobrem diferentes c
 
 Responsável:
 Natan
+
 Estudante de Engenharia de Software
 Futuro Especialista e Engenheiro de Segurança Cibernética
 
