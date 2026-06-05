@@ -49,6 +49,7 @@ O ecossistema é composto por ferramentas complementares que cobrem diferentes c
 > **Aviso:** Este ecossistema foi desenvolvido estritamente para fins educativos, auditorias de segurança autorizadas e testes de intrusão consentidos. O uso indevido dessas ferramentas para atividades maliciosas é de total responsabilidade do usuário.
 
 Responsável:
+
 Natan
 
 Estudante de Engenharia de Software
