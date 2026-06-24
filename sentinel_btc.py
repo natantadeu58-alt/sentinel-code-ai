@@ -14,8 +14,6 @@ def salvar_log(mensagem):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open("sentinel_btc_logs.txt", "a", encoding="utf-8") as arquivo:
         arquivo.write(f"[{timestamp}]{mensagem}\n")
-
-
 def executar_sentinel():
     print("SENTINEL BITCOIN - Monitoramento Ativo...")
     salvar_log("Sistema iniciado e manitorando mercado.")
@@ -39,8 +37,6 @@ def executar_sentinel():
             print(f" {erro_msg}")
             salvar_log(f"Erro: {erro_msg}")
             time.sleep(10)
-
-
 if __name__ == "__main__":
     executar_sentinel()
                     
