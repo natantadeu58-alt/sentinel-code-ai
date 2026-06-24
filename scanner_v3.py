@@ -22,6 +22,7 @@ def gerar_relatorio(cpfs, emails):
                 print(f"- {email}") 
     print("\n" + "-" * 40)
     print("Status: Analise Concluida.")
+    
 print("DATA PRIVACY SCANNER v1.0 (LGPD Focused)")
 print("Cole o conteúdo para análise (digite 'SAIR' em uma nova linha para finalizar):")
 linhas = []
@@ -31,6 +32,7 @@ while True:
         break
     linhas.append(linha)
 texto_completo = "\n".join(linhas)
+
 if texto_completo.strip():
     cpfs, emails = escaneador_dados_sensíveis(texto_completo)
     gerar_relatorio(cpfs, emails)
