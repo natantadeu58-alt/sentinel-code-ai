@@ -1,7 +1,5 @@
 import re
-
 def detector_phishing(url):
-    # Lista de padrões suspeitos comuns em URLs de phishing
     padroes = (r"login", r"secure", r"account", r"update", r"verify")
     for padrao in padroes:
         if re.search(padrao, url, re.IGNORECASE):
@@ -10,12 +8,9 @@ def detector_phishing(url):
 
 def verificar_ip(ip):
     """Verifica se o IP está na lista de BLACKLIST."""
-    # Nota: No código da imagem, a variável IPS_SUSPEITOS não está definida.
-    # Exemplo de lista para o código funcionar:
     IPS_SUSPEITOS = ["10.0.0.5", "192.168.1.100"]
     return ip in IPS_SUSPEITOS
-
-# --- INTERFACE ---
+    
 print("-" * 40)
 print("Detector de Phishing v2.0")
 print("-" * 40)
