@@ -1,9 +1,6 @@
 def analisar_link(url):
-    # Lógica de análise deve ser implementada aqui
     pontos_suspeitos = 0
     motivos = []
-    
-    # Exemplo simples: marcar IPs como suspeitos
     import re
     if re.search(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', url):
         pontos_suspeitos += 1
@@ -20,8 +17,6 @@ if __name__ == "__main__":
     print(f"Analisando o link: {url}")
     
     pontos, motivos = analisar_link(url)
-    
-    # exibe o resultado final
     if pontos >= 1:
         print("\nlink perigo: forte indício de phishing")
         for m in motivos:
