@@ -1,7 +1,7 @@
 import re
 
 def escaneador_dados_sensíveis(texto):
-    # Padrões para CPF e E-mail
+   
     padrao_cpf = r'\d{3}\.\d{3}\.\d{3}-\d{2}'
     padrao_email = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
     
@@ -22,7 +22,7 @@ def gerar_relatorio(cpfs, emails):
         if cpfs:
             print(f"\nCPFs Detectados ({len(cpfs)}):")
             for cpf in cpfs:
-                # Mascaramento: 123.***.***-00
+                
                 print(f"- {cpf[:3]}.***.***-{cpf[-2:]}")
         
         if emails:
@@ -33,7 +33,7 @@ def gerar_relatorio(cpfs, emails):
     print("\n" + "-" * 40)
     print("Status: Analise Concluida.")
 
-# --- INTERFACE ---
+
 print("DATA PRIVACY SCANNER v1.0 (LGPD Focused)")
 print("Cole o conteúdo para análise (digite 'SAIR' em uma nova linha para finalizar):")
 
