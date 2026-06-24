@@ -1,21 +1,16 @@
 import re
 import os
 from datetime import datetime
-
 def mascarar_cpf(cpf):
     return f"{cpf[:3]}***-***{cpf[-2:]}"
-
-
 def processar_arquivos():
         pasta = "documentos_teste"
-        
         if not os.path.exists(pasta):
             os.makedirs(pasta)
             print(f"Pasta '{pasta}' criada.")
             return
         print(f"--- '{pasta}' INICIANDO AUDITORIA DE PRIVACIDADE")
         print(f"Data e hora: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-       
         for nome_arquivo in os.listdir(pasta):
             if nome_arquivo.endswith(".txt"):
                 caminho = os.path.join(pasta, nome_arquivo)
