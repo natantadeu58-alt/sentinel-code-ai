@@ -1,7 +1,6 @@
 import os
 from groq import Groq
 from dotenv import load_dotenv
-# Carregar segurança
 load_dotenv()
 chave = os.getenv("GROQ_API_KEY")
 model = None
@@ -10,12 +9,10 @@ if chave:
 else:
     print("Erro: A chave GROQ_API_KEY não encontrada no arquivo .env")
     raise SystemExit(1)
-def analisar():
-    # 3. Lê o arquivo dê teste 
+def analisar(): 
     with open("test_code.py", "r", encoding="utf-8") as f:
         codigo = f.read()
         print(" Groq analisando código em tempo recorde...")
-        # 4. envia para o modelo Llama 3 (um dos melhores para código)
         try:
             chat_completions = client.chat.completions.create(
                 messages=[
