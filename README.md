@@ -1,57 +1,60 @@
-# 🛡️ Código-Sentinel-AI 
+# 🛡️ Sentinel Code AI - Cybersecurity Toolkit
 
-Um ecossistema modular avançado desenvolvido em **Python** voltado para cibersegurança, auditoria automatizada de redes e análise inteligente de vulnerabilidades. O projeto integra scripts especializados de varredura (scanners) e utiliza modelos de Inteligência Artificial para correlacionar dados coletados e avaliar riscos de segurança em tempo real.
+Um kit completo de ferramentas em Python focado em Cibersegurança, Auditoria Automatizada de Código (SAST) com Inteligência Artificial, Engenharia de Privacidade (LGPD) e Inteligência de Ameaças.
 
-O **Sentinel-AI** foi projetado para atuar como uma solução centralizada de DevSecOps, permitindo que administradores e engenheiros de segurança identifiquem brechas estruturais antes que sejam exploradas por agentes maliciosos.
+## 🚀 Ferramentas Inclusas no Kit
+
+- **🤖 Auditoria de Código com IA (`auditor_ia.py`):** Analisador estático que lê arquivos de código-fonte locais e utiliza os modelos LLM da API do **Groq** (`llama-3.1-8b-instant`) para identificar e diagnosticar vulnerabilidades críticas (como SQL Injection) em tempo recorde.
+- **🔒 Scanner de Privacidade LGPD (`scanner_lgpd.py`):** Script automatizado que realiza a varredura estruturada de diretórios locais em lote, identifica o vazamento de dados sensíveis (PII) como CPFs e aplica máscaras de proteção (`123.***.***-12`) em conformidade com as diretrizes de privacidade.
+- **🕵️ Detector de Phishing & Blacklist (`detector_phishing.py`):** Analisador preventivo de URLs que intercepta palavras-chave suspeitas utilizando expressões regulares (Regex) e realiza o cruzamento de dados com uma lista negra (Blacklist) local de endereços IP bloqueados.
+- **📄 Extrator de Logs com Regex (`scanner_regex.py`):** Utilitário focado em extração de informações brutas que varre arquivos de texto em busca de padrões específicos de endereços IP e e-mails para relatórios de auditoria.
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Python 3.x**
+- **Groq SDK** (IA aplicada à segurança ofensiva e análise de riscos)
+- **Python-Dotenv** (Isolamento seguro de chaves confidenciais da API)
+- **Expressões Regulares (`re`)** (Análise avançada e filtragem de strings)
+- **Pathlib & Os** (Manipulação de arquivos do sistema e automação de diretórios em lote)
+
+## 📈 Histórico de Evolução do Projeto (Jornada de Aprendizado)
+*Como estudante de Engenharia de Software, a arquitetura deste repositório reflete minha evolução prática e amadurecimento lógico através do controle de versão (Git):*
+- **Fase 1.0 (Lógica Inicial):** Desenvolvimento de buscas simples com strings e condicionais para detecção rudimentar de Phishing.
+- **Fase 2.0 (Expressões Regulares):** Implementação de Regex avançadas para validação e criação de estruturas de dados locais para Blacklists de IPs.
+- **Fase 3.0 (Engenharia de Privacidade):** Construção de algoritmos locais para mascaramento de dados (CPFs) baseados na LGPD via entradas manuais no terminal.
+- **Fase 4.0 (Automação e IA):** Refatoração completa de toda a suíte de ferramentas, implementando leitura automatizada de diretórios inteiros e integração completa com Inteligência Artificial Generativa para auditoria estática.
+
+## 🔧 Como Executar as Ferramentas
+
+### 1. Pré-requisitos
+Certifique-se de possuir o Python instalado e uma credencial de acesso no [Groq Console](https://groq.com).
+
+### 2. Configurar as Dependências
+Instale as bibliotecas necessárias declaradas no arquivo do projeto:
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configurar as Variáveis de Ambiente
+Crie um arquivo chamado `.env` na raiz do repositório e insira seu token:
+```env
+GROQ_API_KEY=sua_chave_groq_aqui
+```
+
+### 4. Executar um Módulo
+Basta chamar a ferramenta desejada diretamente pelo terminal:
+```bash
+python auditor_ia.py
+```
 
 ---
+💡 *Desenvolvido como projeto de portfólio prático integrado, demonstrando habilidades em Segurança da Informação, LGPD, Regex e Engenharia de Software.*
 
-## 📂 Estrutura de Módulos e Funcionalidades 
-
-O ecossistema é composto por ferramentas complementares que cobrem diferentes camadas da segurança da informação:
-
-* **`Sentinel Code AI.py` (Módulo Central)** O "cérebro" do ecossistema. Consome as APIs de Inteligência Artificial para receber relatórios de texto dos scanners técnicos e traduzi-los em análises de risco de alto nível com recomendações de correção (*remediation*).*
-
-* **`Cyber_eye.py` (Scanner de Reconhecimento)** Atua na fase de *Footprinting*. Analisa portas lógicas abertas, identifica banners de serviços ativos (versões de sistemas) e mapeia a superfície de ataque exposta.
-
-* * **`sentinel_btc.py` (Módulo de Monitorização de Ativos)** Script focado na análise de dados e integridade de transações/endereços, demonstrando a versatilidade do ecossistema no tratamento de protocolos criptográficos específicos.
-  
-  * * **`scanner_v1.py` ao `scanner_v5.py` (Suíte Evolutiva de Auditoria)** * **Scanner de Senhas & Autenticação:** Módulos dedicados a testar a robustez de credenciais corporativas e validação de políticas de segurança contra ataques de força bruta controlado.
-    
-    * **Scanner de Vulnerabilidades Web:** Análise automatizada de cabeçalhos HTTP, validação de certificados SSL/TLS e deteção de falhas comuns listadas no OWASP Top 10.
-
----
-
-### 🛠️ Tecnologias Utilizadas
-
-* **Linguagem Principal:** Python 3.x
-* **Bibliotecas de Rede:** `socket`, `requests`, `urllib3`
-* **Inteligência Artificial:** Integração de Large Language Models (LLMs) via chamadas de API assíncronas para automação de triagem.
-* **Segurança de Credenciais:** Gestão de variáveis de ambiente com `python-dotenv`.
-
-
----
-
-### 🛡️ Boas Práticas de Segurança (DevSecOps)
-
-* **Proteção de Segredos:** As chaves de API e tokens privados **nunca** são injetados diretamente no código-fonte. O projeto utiliza um arquivo `.env` local mapeado no `.gitignore` para blindagem de segredos.
-* **Resiliência do Sistema:** Todas as varreduras web possuem tratamento de exceções robusto para evitar negação de serviço ou interrupções inesperadas durante a execução.
-
----
-
-### 🚀 Próximos Passos do Roadmap
-
-- [ ] Migrar a arquitetura dos scripts para uma estrutura modular de pacotes dentro de um diretório específico.
-- [ ] Desenvolver relatórios automáticos exportáveis nos formatos JSON e PDF.
-
-
-> [!WARNING]
-> **Aviso:** Este ecossistema foi desenvolvido estritamente para fins educativos, auditorias de segurança autorizadas e testes de intrusão consentidos. O uso indevido dessas ferramentas para atividades maliciosas é de total responsabilidade do usuário.
 
 Responsável:
 
 Natan
 
 Estudante de Engenharia de Software
-Futuro Especialista e Engenheiro de Segurança Cibernética
+Futuro Especialista e Engenheiro de Segurança Cibernética.
 
