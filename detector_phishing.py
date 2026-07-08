@@ -1,11 +1,10 @@
+import re
+
 def analisar_link(url):
-    
     pontos_suspeitos = 0
     motivos = []
     
-    
-    import re
-    if re.search(r'\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}', url):
+    if re.search(r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b', url):
         pontos_suspeitos += 1
         motivos.append("O link contém um endereço IP em vez de um domínio.")
         
@@ -21,10 +20,9 @@ if __name__ == "__main__":
     
     pontos, motivos = analisar_link(url)
     
-    
     if pontos >= 1:
-        print("\nlink perigo: forte indício de phishing")
+        print("\nLink perigoso: forte indício de phishing")
         for m in motivos:
             print(f"- {m}")
     else:
-        print("\nlink parece seguro")
+        print("\nLink parece seguro")
