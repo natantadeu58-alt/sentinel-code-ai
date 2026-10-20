@@ -23,7 +23,7 @@ def analisar():
                 ],
                 model="openai/gpt-oss-20b"
             )
-            print("\n--- SETINEL CODE AI: AUDITORIA DE SEGURANÇA ---\n")
+            print("\n--- SETINEL: AUDITORIA DE SEGURANÇA ---\n")
             print(chat_completions.choices[0].message.content)
         except Exception as e:
             print(f"Erro ao processar: {e}")
