@@ -21,7 +21,7 @@ def analisar():
                         "content": f"Analise este código: \n\n{codigo}",
                     }
                 ],
-                model="llama-3.1-8b-instant"
+                model="openai/gpt-oss-20b"
             )
             print("\n--- SETINEL CODE AI: AUDITORIA DE SEGURANÇA ---\n")
             print(chat_completions.choices[0].message.content)
