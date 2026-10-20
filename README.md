@@ -8,7 +8,7 @@ Kit de ferramentas em Python para cibersegurança: auditoria automatizada de có
 
 | Ferramenta | Arquivo | O que faz |
 |---|---|---|
-| **Auditoria de código com IA** | `auditor_ia.py` | Analisador estático que lê arquivos de código-fonte locais e usa um modelo LLM da API da Groq (`llama-3.1-8b-instant`) para identificar e diagnosticar vulnerabilidades críticas, como SQL Injection. |
+| **Auditoria de código com IA** | `auditor_ia.py` | Analisador estático que lê arquivos de código-fonte locais e usa um modelo LLM da API da Groq (`openai/gpt-oss-20b`) para identificar e diagnosticar vulnerabilidades críticas, como SQL Injection. |
 | **Scanner de privacidade (LGPD)** | `scanner_lgpd.py` | Varre diretórios locais em lote, identifica dados pessoais sensíveis (PII), como CPFs, e aplica máscara de proteção (por exemplo, `123.***.***-12`). |
 | **Detector de phishing e blacklist** | `detector_phishing.py` | Analisa URLs de forma preventiva, procurando palavras-chave suspeitas com expressões regulares e cruzando com uma lista local de endereços IP bloqueados. |
 | **Extrator de logs com Regex** | `scanner_regex.py` | Varre arquivos de texto em busca de padrões de endereços IP e e-mails, para uso em relatórios de auditoria. |
