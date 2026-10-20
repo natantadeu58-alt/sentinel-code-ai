@@ -60,7 +60,7 @@ python detector_phishing.py
 python scanner_regex.py
 ```
 
-> O arquivo `.env` guarda credenciais e nunca deve ser enviado ao GitHub. Confira que ele está listado no `.gitignore`.
+
 
 ---
 
